@@ -1,0 +1,46 @@
+# Table of contents
+
+## 🚀 Getting Started
+* [Welcome to LXS Univo](README.md)
+* [Platform Overview](getting-started/platform-overview.md)
+* [Quickstart — Local Dev](getting-started/quickstart.md)
+* [For Clients: What You Get](getting-started/for-clients.md)
+
+## 🏛️ Architecture
+* [System Architecture](architecture/system-architecture.md)
+* [Micro-Frontends](architecture/micro-frontends.md)
+* [Infrastructure (AWS)](architecture/infrastructure.md)
+* [Security Model](architecture/security.md)
+* [Architecture Decision Records](architecture/decisions/README.md)
+  * [ADR-0001: Deploy on Open edX Ulmo](architecture/decisions/ADR-0001-ulmo-baobab.md)
+  * [ADR-0002: AWS Region Selection](architecture/decisions/ADR-0002-region-af-south-1.md)
+  * [ADR-0004: Repeatable Deployment Architecture](architecture/decisions/ADR-0004-scale-200M.md)
+
+## 💻 Developer Guides
+* [Learner App (lms-mfe-app)](developer-guides/mfe-app.md)
+* [Admin Console (lms-mfe-admin)](developer-guides/mfe-admin.md)
+* [Auth Service (lms-mfe-auth)](developer-guides/mfe-auth.md)
+* [Infrastructure as Code (lms-terraform)](developer-guides/terraform.md)
+* [Contributing & Code Standards](developer-guides/contributing.md)
+
+## ☁️ Deployment & Operations
+* [Client Prerequisites](deployment/client-prerequisites.md)
+* [Deployment Guide](deployment/deployment-guide.md)
+* [Open edX / Tutor Operations](deployment/tutor-operations.md)
+* [Runbooks](deployment/runbooks.md)
+* [Monitoring & Reliability](deployment/monitoring.md)
+
+## 🌱 Product
+* [Features](product/features.md)
+* [Social Learning](product/social-learning.md)
+* [Offline-First Learning](product/offline-first.md)
+* [Studio — Content Creation](product/studio.md)
+
+## 🗺️ Roadmap
+* [Product Roadmap](roadmap/README.md)
+* [Future Development](roadmap/future-development.md)
+* [Changelog](roadmap/changelog.md)
+
+## 📋 API Reference
+* [GraphQL API](api-reference/graphql.md)
+* [Integrations](api-reference/integrations.md)
