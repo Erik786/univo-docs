@@ -14,6 +14,7 @@
 * [Architecture Decision Records](architecture/decisions/README.md)
   * [ADR-0001: Deploy on Open edX Ulmo](architecture/decisions/ADR-0001-ulmo-baobab.md)
   * [ADR-0002: AWS Region Selection](architecture/decisions/ADR-0002-region-af-south-1.md)
+  * [ADR-0003: Multi-Agent Orchestration (Kanban)](architecture/decisions/ADR-0003-kanban-orchestration.md)
   * [ADR-0004: Repeatable Deployment Architecture](architecture/decisions/ADR-0004-scale-200M.md)
 
 ## 💻 Developer Guides
