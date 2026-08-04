@@ -1,6 +1,6 @@
 # Admin Console (`lms-mfe-admin`)
 
-Developer guide for the **administration panel micro-frontend** — a React SPA served under `/v2-admin` on each customer domain. Admins manage users, groups, catalogs, licenses, chat, and theming.
+Developer guide for the **administration panel micro-frontend**, a React SPA served under `/v2-admin` on each customer domain. Admins manage users, groups, catalogs, licenses, chat, and theming.
 
 One of three sibling MFEs (`lms-mfe-app`, `lms-mfe-auth`, `lms-mfe-admin`), all talking to the same GraphQL backend and sharing session state via `localStorage` tokens.
 
@@ -19,11 +19,11 @@ One of three sibling MFEs (`lms-mfe-app`, `lms-mfe-auth`, `lms-mfe-admin`), all 
         Pusher (chat events) │  AWS S3 (uploads + static assets)
 ```
 
-- **State** — single Context + reducer store (`src/context/`): side effects in `action.jsx`, GraphQL documents in `query.jsx`. Requests go through an axios wrapper (`src/utils/api.jsx`) attaching the `jwt` from `localStorage`.
-- **Auth flow** — no login UI here. `AuthProtector` fires a dashboard query on mount; on failure the browser redirects to `REACT_APP_AUTH_ENDPOINT`. Admins can "ghost" (impersonate) a learner, storing a `jwt-ghost` token consumed by `lms-mfe-app`.
-- **Chat** — `pusher-js` subscription (`message` channel) feeds the admin inbox.
-- **Uploads** — direct browser→S3 via `react-s3` (known tech debt; pre-signed URLs planned).
-- **Theming** — MUI v5 light/dark themes; Tailwind utilities; react-i18next with 6 locales (`uk`, `fr`, `de`, `es-419`, `zh-CN`, `ar`), default `fr`.
+- **State**, single Context + reducer store (`src/context/`): side effects in `action.jsx`, GraphQL documents in `query.jsx`. Requests go through an axios wrapper (`src/utils/api.jsx`) attaching the `jwt` from `localStorage`.
+- **Auth flow**, no login UI here. `AuthProtector` fires a dashboard query on mount; on failure the browser redirects to `REACT_APP_AUTH_ENDPOINT`. Admins can "ghost" (impersonate) a learner, storing a `jwt-ghost` token consumed by `lms-mfe-app`.
+- **Chat**, `pusher-js` subscription (`message` channel) feeds the admin inbox.
+- **Uploads**, direct browser→S3 via `react-s3` (known tech debt; pre-signed URLs planned).
+- **Theming**, MUI v5 light/dark themes; Tailwind utilities; react-i18next with 6 locales (`uk`, `fr`, `de`, `es-419`, `zh-CN`, `ar`), default `fr`.
 
 ## Tech stack
 
@@ -49,7 +49,7 @@ cp .env.example .env   # or fetch the env file from your config bucket
 npm start              # dev server on http://localhost:3000/v2-admin
 ```
 
-Node 18 (as pinned in `buildspec.yml`). You must log in through the auth MFE first — the app redirects there when no valid session exists.
+Node 18 (as pinned in `buildspec.yml`). You must log in through the auth MFE first, the app redirects there when no valid session exists.
 
 ## Environment variables
 
@@ -64,7 +64,7 @@ CRA-style `REACT_APP_*`, compiled in at build time. CI downloads `.env` from `s3
 | `REACT_APP_ADMIN_BASE_PATH` | Router basename (`/v2-admin`) |
 | `REACT_APP_SITE_NAME` / `REACT_APP_SITE_DISPLAY_NAME` | Tenant slug / display name (S3 paths, Pusher events) |
 | `REACT_APP_S3_ENDPOINT` / `REACT_APP_S3_ASSET_ENDPOINT` | Base URLs for tenant assets (logos, icons, signatures) |
-| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | Direct uploads ⚠️ credentials ship to the browser — known tech debt |
+| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | Direct uploads ⚠️ credentials ship to the browser, known tech debt |
 | `REACT_APP_PUSHER_KEY` / `REACT_APP_PUSHER_CLUSTER` | Pusher chat connection |
 | `REACT_APP_FROALA_KEY` | Froala editor license key |
 | `REACT_APP_LOGO_URL` / `REACT_APP_FAVICON_URL` | Branding assets |
@@ -79,7 +79,7 @@ CRA-style `REACT_APP_*`, compiled in at build time. CI downloads `.env` from `s3
 | `npm run build` | Production build to `build/` (CRA ESLint runs during build) |
 | `npm run build:dev` | Build sourcing `./.env.development` |
 | `npm test` | Jest test runner (minimal coverage today) |
-| `npm run upload*` | Manual S3 sync ⚠️ uses `--delete`; `upload_prod` goes straight to prod — use with care |
+| `npm run upload*` | Manual S3 sync ⚠️ uses `--delete`; `upload_prod` goes straight to prod, use with care |
 
 ## Folder structure
 
@@ -108,7 +108,7 @@ CRA-style `REACT_APP_*`, compiled in at build time. CI downloads `.env` from `s3
 
 1. Create the screen under `src/pages/<feature>/` using existing `B*` components and `V*` form controls.
 2. Register the route in `src/App.jsx`.
-3. Add strings to **all 6 locales** in `src/i18n/messages` — they must stay in sync.
+3. Add strings to **all 6 locales** in `src/i18n/messages`, they must stay in sync.
 4. Verify light and dark themes.
 
 ### Add a GraphQL query
@@ -121,9 +121,9 @@ CRA-style `REACT_APP_*`, compiled in at build time. CI downloads `.env` from `s3
 
 ```bash
 npm test         # Jest (add tests when touching src/utils or src/context)
-npm run build    # CRA's ESLint runs during build — must pass clean
+npm run build    # CRA's ESLint runs during build, must pass clean
 ```
 
 ### Deploy to a customer
 
-Canonical path is CI (CodeBuild via `buildspec.yml`): fetch customer `.env` from the config bucket → build → sync to `s3://<env>-common-apps-customers-bucket/<CUSTOMER>/v2-admin/ --delete` (prod assumes a cross-account STS role). The manual `upload*` scripts exist but bypass review — prefer CI.
+Canonical path is CI (CodeBuild via `buildspec.yml`): fetch customer `.env` from the config bucket → build → sync to `s3://<env>-common-apps-customers-bucket/<CUSTOMER>/v2-admin/ --delete` (prod assumes a cross-account STS role). The manual `upload*` scripts exist but bypass review, prefer CI.

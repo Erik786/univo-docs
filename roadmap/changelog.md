@@ -2,7 +2,7 @@
 
 All notable changes to the platform are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/): each release lists changes under **Added**, **Changed**, **Fixed** and **Security**.
 
-## [v2026.08] — August 2026
+## [v2026.08], August 2026
 
 ### Security
 
@@ -22,7 +22,7 @@ All notable changes to the platform are documented here. The format follows [Kee
 New releases are appended at the top of this page using this template:
 
 ```markdown
-## [vYYYY.MM] — Month YYYY
+## [vYYYY.MM], Month YYYY
 
 ### Added
 - New features and capabilities.

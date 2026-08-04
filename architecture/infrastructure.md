@@ -1,6 +1,6 @@
 # Infrastructure
 
-The entire AWS stack is defined as code in the `lms-terraform` repository. Everything deploys into the **client's own AWS account** — the client owns the data, the infrastructure, and the keys.
+The entire AWS stack is defined as code in the `lms-terraform` repository. Everything deploys into the **client's own AWS account**, the client owns the data, the infrastructure, and the keys.
 
 ## Two-layer Terraform design
 
@@ -23,7 +23,7 @@ The entire AWS stack is defined as code in the `lms-terraform` repository. Every
 └────────────────────────────────────────────────────────────────┘
 ```
 
-The **bootstrap** layer creates account-wide shared resources once; the **platform** layer stamps out an isolated customer platform on top of it. One environment = one Terraform state file — state keys are never shared between platforms. The canonical deploy path is an AWS CodeBuild pipeline that fetches the customer's `.env` from a config bucket, substitutes placeholders in `terraform.tfvars`/`backend.tf`, and applies.
+The **bootstrap** layer creates account-wide shared resources once; the **platform** layer stamps out an isolated customer platform on top of it. One environment = one Terraform state file, state keys are never shared between platforms. The canonical deploy path is an AWS CodeBuild pipeline that fetches the customer's `.env` from a config bucket, substitutes placeholders in `terraform.tfvars`/`backend.tf`, and applies.
 
 ## Components
 
@@ -50,7 +50,7 @@ The **bootstrap** layer creates account-wide shared resources once; the **platfo
 - Terraform state buckets are private, versioned, and encrypted (state contains sensitive values).
 - No secrets in git: credentials live in Secrets Manager and per-customer `.env` files fetched at deploy time (see [Security](security.md)).
 
-## Monthly cost estimate — pilot deployment
+## Monthly cost estimate, pilot deployment
 
 Indicative cost for a single pilot platform (100–1,000 active learners, single EC2, modest traffic). Actual figures vary by region and usage.
 
@@ -77,6 +77,6 @@ terraform init && terraform apply
 
 # Deploy a customer platform (canonical path: CodeBuild; local equivalent:)
 cd infrastructure
-cp .env.$CUSTOMER .env          # obtained securely — never committed
+cp .env.$CUSTOMER .env          # obtained securely, never committed
 ./deploy-generic-platform.sh    # or plan- / destroy- variants
 ```

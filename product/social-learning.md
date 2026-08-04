@@ -1,16 +1,16 @@
 # 💬 Social Learning
 
-Learning sticks when it's social. LXS Univo ships with real-time communication built in — not bolted on.
+Learning sticks when it's social. LXS Univo ships with real-time communication built in, not bolted on.
 
-![Virtual class — live video sessions run on the integrated Jitsi instance, inside the platform](../.gitbook/assets/virtual-class.jpg)
+![Virtual class, live video sessions run on the integrated Jitsi instance, inside the platform](../.gitbook/assets/virtual-class.jpg)
 
 ## 💬 Coach Chat
 
-Every learner can be assigned a coach. Chat is **real-time**, powered by **Pusher** over a public `message` channel — messages arrive instantly on both sides with no polling.
+Every learner can be assigned a coach. Chat is **real-time**, powered by **Pusher** over a public `message` channel, messages arrive instantly on both sides with no polling.
 
 - 1:1 conversations between a learner and their coach
 - Message history persisted via the GraphQL API
-- Available directly in the Learner app (`/app`) — no external tool required
+- Available directly in the Learner app (`/app`), no external tool required
 
 ## 🗨️ Course Comments & Replies
 
@@ -25,7 +25,7 @@ Each course unit supports threaded discussion:
 Live video sessions run on an integrated **Jitsi** instance:
 
 - Coaches schedule and host live sessions with their cohort
-- Sessions open inside the platform — no separate account or download
+- Sessions open inside the platform, no separate account or download
 - Configured per deployment via the Jitsi domain setting
 
 ## 🧭 Guides & Onboarding
@@ -36,4 +36,4 @@ Live video sessions run on an integrated **Jitsi** instance:
 
 ## 🔭 Where this is going
 
-Social Learning 2.0 is on the [public roadmap](../roadmap/README.md): thematic groups, learner networking and presence — all built on the existing Pusher chat foundation. See [Future Development](../roadmap/future-development.md).
+Social Learning 2.0 is on the [public roadmap](../roadmap/README.md): thematic groups, learner networking and presence, all built on the existing Pusher chat foundation. See [Future Development](../roadmap/future-development.md).

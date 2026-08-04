@@ -1,6 +1,6 @@
 # Micro-Frontend Architecture
 
-The LXS Univo UI layer is not one SPA — it is **three independent micro-frontends**, each a separate Create React App (React 17) codebase, built, tested, and deployed on its own. A bug or deploy in one never takes down the others.
+The LXS Univo UI layer is not one SPA, it is **three independent micro-frontends**, each a separate Create React App (React 17) codebase, built, tested, and deployed on its own. A bug or deploy in one never takes down the others.
 
 ## The three MFEs
 
@@ -18,9 +18,9 @@ Each MFE is:
 
 ## How they cooperate
 
-**One shared session.** The auth MFE writes the JWT to `localStorage` on the shared domain. The learner app and admin console never log in themselves — on bootstrap they validate the token against the GraphQL API and redirect to `REACT_APP_AUTH_ENDPOINT` when it is missing or expired. Every API call attaches the JWT as the `Authorization` header.
+**One shared session.** The auth MFE writes the JWT to `localStorage` on the shared domain. The learner app and admin console never log in themselves, on bootstrap they validate the token against the GraphQL API and redirect to `REACT_APP_AUTH_ENDPOINT` when it is missing or expired. Every API call attaches the JWT as the `Authorization` header.
 
-**One shared API.** All three MFEs talk exclusively to the same GraphQL endpoint (`REACT_APP_GQL_ENDPOINT`). No MFE couples directly to Open edX internals, which keeps edX upgrades safe.
+**One shared API.** All three MFEs talk exclusively to the same GraphQL endpoint (`REACT_APP_GQL_ENDPOINT`). No MFE couples directly to course-engine internals, which keeps engine upgrades safe.
 
 **Cross-MFE navigation via env.** URLs of sibling MFEs (`REACT_APP_APP_ENDPOINT`, `REACT_APP_ADMIN_ENDPOINT`, `REACT_APP_STUDIO_ENDPOINT`) are compile-time configuration, so each customer deployment links to its own instances.
 
@@ -37,12 +37,12 @@ In CI (AWS CodeBuild), the pipeline downloads the customer's `.env` from a confi
 
 ## Why this pattern
 
-1. **Independent deployability** — ship an admin-console fix without touching the learner app.
-2. **Blast-radius isolation** — a broken MFE does not take down login or courseware.
-3. **Per-customer customization** — theming, endpoints, and feature config differ per deployment while the codebase stays single.
-4. **Team autonomy** — each MFE has its own state pattern (Context+reducer for app/admin, Redux for auth) and release cadence.
+1. **Independent deployability**, ship an admin-console fix without touching the learner app.
+2. **Blast-radius isolation**, a broken MFE does not take down login or courseware.
+3. **Per-customer customization**, theming, endpoints, and feature config differ per deployment while the codebase stays single.
+4. **Team autonomy**, each MFE has its own state pattern (Context+reducer for app/admin, Redux for auth) and release cadence.
 
 ## Known trade-offs
 
-- Shared `localStorage` JWT means token handling rules (storage, expiry, rotation) must be consistent across all three repos — this is a reviewed, security-sensitive area (see [Security](security.md)).
+- Shared `localStorage` JWT means token handling rules (storage, expiry, rotation) must be consistent across all three repos, this is a reviewed, security-sensitive area (see [Security](security.md)).
 - Environment config is build-time, so rotating an endpoint requires a rebuild/redeploy of the affected MFEs (fully automated in CI).

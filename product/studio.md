@@ -16,15 +16,15 @@ Course content is authored in **Open edX Studio** and rendered in the Learner ap
 ## 📦 SCORM packaging notes
 
 - Export packages as **SCORM 1.2** for maximum compatibility
-- Keep package sizes lean: compress media before zipping, and avoid bundling videos — host them on Vimeo and reference them instead
+- Keep package sizes lean: compress media before zipping, and avoid bundling videos, host them on Vimeo and reference them instead
 - Test completion criteria in the package itself; the player reports completion back to the course
 - Name files and manifests with ASCII characters only to avoid encoding issues on upload
 
 ## 🎥 Video best practices
 
-- **Hosting:** all videos are hosted on **Vimeo Pro** and embedded via the `vimeo` xBlock — never upload raw video files to the course assets
+- **Hosting:** all videos are hosted on **Vimeo Pro** and embedded via the `vimeo` xBlock, never upload raw video files to the course assets
 - **Compression:** export H.264 MP4, 1080p maximum; target ~5 Mbps for talking-head content to keep streaming smooth on modest connections
-- **Captions:** provide captions for every video — required for accessibility and for the 6 supported locales
+- **Captions:** provide captions for every video, required for accessibility and for the 6 supported locales
 - **Length:** keep individual videos under 10 minutes; split longer topics into a sequence of units
 
 ## 📝 Rich text with Froala
@@ -40,9 +40,9 @@ The `html` xBlock editor uses **Froala WYSIWYG**:
 Mathematical notation renders through **MathJax**:
 
 - Write formulas in LaTeX syntax inside HTML components
-- Inline math: `\( E = mc^2 \)` — display math: `\[ \int_0^1 x^2 \, dx \]`
+- Inline math: `\( E = mc^2 \)`, display math: `\[ \int_0^1 x^2 \, dx \]`
 - MathJax renders consistently across all 6 locales, including right-to-left (`ar`)
 
 ---
 
-*A Studio Reliability Program (monitoring, save-failure elimination, SCORM pipeline improvements) is committed for Q4 2026 — see the [roadmap](../roadmap/README.md).*
+*A Studio Reliability Program (monitoring, save-failure elimination, SCORM pipeline improvements) is committed for Q4 2026, see the [roadmap](../roadmap/README.md).*

@@ -1,6 +1,6 @@
 # Client Prerequisites
 
-Everything a client must provide before a platform deployment can start. Gather these during the sales/onboarding phase — a missing item blocks the timeline.
+Everything a client must provide before a platform deployment can start. Gather these during the sales/onboarding phase, a missing item blocks the timeline.
 
 ## Checklist
 
@@ -18,7 +18,7 @@ Everything a client must provide before a platform deployment can start. Gather 
 
 ## How to deliver
 
-- Credentials and keys: via a secure channel (password manager share, Secrets Manager) — **never by plain email or committed to a repository**.
+- Credentials and keys: via a secure channel (password manager share, Secrets Manager), **never by plain email or committed to a repository**.
 - Brand assets: a single ZIP or shared drive folder with source files (SVG/vector preferred).
 - Contacts: names, emails, phone numbers, and expected response times.
 

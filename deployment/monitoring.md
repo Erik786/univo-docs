@@ -16,12 +16,12 @@ Availability is measured monthly at the public entry point (the learner app URL)
 |-------|-------|-------|
 | Edge | CloudFront distribution returning 2xx/3xx on `/app`, `/auth`, `/v2-admin` | External probe (uptime monitor) |
 | Load balancer | ALB target health: all targets `healthy` | CloudWatch: `HealthyHostCount` |
-| Open edX (Tutor) | HTTP 200 on the LMS `/heartbeat` endpoint | ALB health check path + external probe |
+| Course engine | HTTP 200 on the LMS `/heartbeat` endpoint | ALB health check path + external probe |
 | GraphQL API | Lambda invocation errors and duration | CloudWatch Lambda metrics |
 | Database | RDS MySQL `DatabaseConnections`, CPU, free storage | CloudWatch RDS metrics |
 | DocumentDB | Cluster CPU, connections, free storage | CloudWatch DocDB metrics |
 
-A failing heartbeat on any critical path (site unreachable, heartbeat down, DB exhausted) is a SEV1/SEV2 — see [Runbooks](runbooks.md).
+A failing heartbeat on any critical path (site unreachable, heartbeat down, DB exhausted) is a SEV1/SEV2, see [Runbooks](runbooks.md).
 
 ## Alerting
 
@@ -46,13 +46,13 @@ A single CloudWatch dashboard per environment aggregates: ALB request count and 
 
 | Source | Destination | Retention |
 |--------|-------------|-----------|
-| Open edX / Tutor services | `tutor logs` on the platform EC2 (see [Tutor Operations](tutor-operations.md)) | local rotation |
+| Course engine services | engine logs on the platform EC2 (see [Tutor Operations](tutor-operations.md)) | local rotation |
 | Lambda API services | CloudWatch Logs, one group per function | 30 days (recommended) |
 | ALB access logs | S3 logs bucket (bootstrap layer) | per bucket lifecycle |
 | CloudFront / WAF logs | S3 logs bucket | per bucket lifecycle |
 
 ## Operational habits
 
-- Backup restore test once per quarter — an unrestored backup does not exist.
+- Backup restore test once per quarter, an unrestored backup does not exist.
 - One game day per quarter on staging: deliberately break something and run the runbook.
 - Review the availability number monthly; any month under 99% gets a written explanation in the weekly report.

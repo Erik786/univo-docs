@@ -54,7 +54,7 @@ tutor local run cms ./manage.py cms export_course <course-id> /tmp/exports/
 aws s3 sync /tmp/exports/ s3://<backup-bucket>/courses/
 ```
 
-**A backup that hasn't been restored doesn't exist** — run a restore test quarterly.
+**A backup that hasn't been restored doesn't exist**, run a restore test quarterly.
 
 ## Restore
 
@@ -88,13 +88,13 @@ tutor local upgrade --from=<previous-release>   # runs migrations (e.g. from Tea
 ```
 
 4. Verify: `/heartbeat`, login, course playback, Studio save, certificates.
-5. **Redeploy MFEs** if the release requires it — rerun the three CodeBuild pipelines (auth, app, admin) with the existing customer env files.
+5. **Redeploy MFEs** if the release requires it, rerun the three CodeBuild pipelines (auth, app, admin) with the existing customer env files.
 6. Monitor CloudWatch for 24h.
 
 ### Rollback
 
-- MFEs: redeploy the previous build — each CodeBuild run syncs from a known git ref; re-run the pipeline pinned to the previous release tag.
+- MFEs: redeploy the previous build, each CodeBuild run syncs from a known git ref; re-run the pipeline pinned to the previous release tag.
 - Open edX: restore the pre-upgrade RDS snapshot and DocumentDB snapshot, revert Tutor to the previous version (`pip install tutor==<old-version>`, `tutor config save`, restart). Course exports are the last-resort content restore.
-- Infrastructure: `terraform plan`/`apply` from the previous state — never destroy to roll back.
+- Infrastructure: `terraform plan`/`apply` from the previous state, never destroy to roll back.
 
 Prefer **restore service first, investigate second** (see [Runbooks](runbooks.md)).

@@ -1,6 +1,6 @@
 # System Architecture
 
-LXS Univo is composed of cooperating, independently deployable systems: three React micro-frontends, a serverless GraphQL API, an Open edX course engine, and managed data stores — all running in the client's own AWS account.
+LXS Univo is composed of cooperating, independently deployable systems: three React micro-frontends, a serverless GraphQL API, a mature open-source course engine, and managed data stores, all running in the client's own AWS account.
 
 ## High-level diagram
 
@@ -20,8 +20,8 @@ LXS Univo is composed of cooperating, independently deployable systems: three Re
              └────────────────────────┼─────────────────────────┘
                                       ▼  GraphQL over HTTPS (JWT)
                           ┌────────────────────┐        ┌────────────────┐
-                          │   GraphQL API      │───────▶│  Open edX      │
-                          │   (AWS Lambda +    │        │  (Tutor, EC2)  │
+                          │   GraphQL API      │───────▶│  Course engine │
+                          │   (AWS Lambda +    │        │  (EC2)         │
                           │   API Gateway)     │        │  courses, xBlocks│
                           └─────────┬──────────┘        └───────┬────────┘
             ┌───────────────────────┼───────────────────────────┤
@@ -41,7 +41,7 @@ LXS Univo is composed of cooperating, independently deployable systems: three Re
 | Flow | Path |
 |---|---|
 | Static UI | Browser → CloudFront → S3 SPA bucket (per-customer prefix) |
-| Data read/write | Browser → GraphQL API (Lambda behind API Gateway) → RDS MySQL / DocumentDB / Open edX |
+| Data read/write | Browser → GraphQL API (Lambda behind API Gateway) → RDS MySQL / DocumentDB / course engine |
 | Course content | GraphQL returns xBlock list → rendered by the learner app; SCORM/LTI/HTML rendered from stored content |
 | Realtime chat | Browser ↔ Pusher (public `message` channel, per-user events) |
 | File uploads | Browser → direct-to-S3 (per-tenant buckets/prefixes) |
@@ -50,7 +50,7 @@ LXS Univo is composed of cooperating, independently deployable systems: three Re
 
 1. The user signs in at the **auth MFE** (`/auth/login`).
 2. The auth MFE calls the **GraphQL API** login mutation; on success it receives a **JWT** plus a role (`USER`, `STAFF`, `ADMIN`, `SUPERADMIN`).
-3. For privileged roles, the auth MFE additionally establishes a session with the **Open edX LMS backend** (CSRF + `login_session` endpoints) so staff can use Studio and edX-administered features.
+3. For privileged roles, the auth MFE additionally establishes a session with the **course-engine LMS backend** (CSRF + `login_session` endpoints) so staff can use Studio and engine-administered features.
 4. The JWT is stored in **`localStorage`**, shared by all MFEs under the same domain.
 5. Every subsequent GraphQL request carries the JWT in the **`Authorization` header** (attached by a single axios wrapper in each MFE).
 6. On bootstrap, the learner app and admin console validate the token with a dashboard query; on failure they redirect to `REACT_APP_AUTH_ENDPOINT`. The admin console's "ghost" (impersonation) feature stores a separate `jwt-ghost` token consumed by the learner app.
@@ -61,7 +61,7 @@ There is exactly one place where credentials are entered: the auth MFE. No other
 
 | Store | Engine | Holds |
 |---|---|---|
-| RDS MySQL | AWS RDS | Open edX platform data (users, enrollments, grades) |
+| RDS MySQL | AWS RDS | Course-engine platform data (users, enrollments, grades) |
 | DocumentDB | AWS DocumentDB | Course content (MongoDB-compatible modulestore) |
 | S3 | AWS S3 | Static MFE bundles, per-tenant assets, user uploads, logs |
 

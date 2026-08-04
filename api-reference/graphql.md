@@ -1,6 +1,6 @@
 # GraphQL API
 
-The platform exposes a **single GraphQL API** over HTTP. Every frontend — Learner app, Admin console, Auth service — talks exclusively to this API. Partner integrations use the same endpoint.
+The platform exposes a **single GraphQL API** over HTTP. Every frontend, Learner app, Admin console, Auth service, talks exclusively to this API. Partner integrations use the same endpoint.
 
 ## Endpoint & transport
 
@@ -82,7 +82,7 @@ query CourseProgress($courseId: ID!) {
 ## Error conventions
 
 - GraphQL errors are returned in the standard `errors` array, alongside partial `data` when available
-- Authentication failures return `401 Unauthorized` at the HTTP level — refresh your token and retry
+- Authentication failures return `401 Unauthorized` at the HTTP level, refresh your token and retry
 - Validation and business-logic errors include a machine-readable `extensions.code` field
 - Rate limiting, when triggered, returns `429 Too Many Requests` with a `Retry-After` header
 

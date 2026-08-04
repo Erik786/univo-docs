@@ -6,7 +6,7 @@ Security is designed into the platform at every layer, and was independently ver
 
 - **JWT-based sessions.** The auth MFE is the only place credentials are entered. On login, the GraphQL API issues a JWT with a role (`USER`, `STAFF`, `ADMIN`, `SUPERADMIN`); the token is stored in `localStorage` and sent as the `Authorization` header on every API request.
 - **Centralized validation.** Learner app and admin console validate the token on bootstrap and redirect to the auth MFE when it is missing or expired. Logout and session expiry are handled centrally.
-- **Staff edX sessions.** Privileged roles additionally receive an Open edX `login_session` cookie (CSRF-protected) for Studio access — separate from the platform JWT.
+- **Staff engine sessions.** Privileged roles additionally receive a course-engine `login_session` cookie (CSRF-protected) for Studio access, separate from the platform JWT.
 - **Impersonation is explicit.** The admin "ghost" feature uses a distinct token (`jwt-ghost`), keeping impersonated sessions identifiable.
 
 ## Secrets management (post-audit standard)
@@ -15,7 +15,7 @@ Security is designed into the platform at every layer, and was independently ver
 |---|---|
 | No secrets in git | All credentials removed from repositories; git history scrubbed where secrets had been committed |
 | Centralized storage | Platform secrets rendered into **AWS Secrets Manager**, granted to EC2/Lambda via scoped IAM roles |
-| Per-environment config | MFE `.env` files live in a restricted config bucket and are fetched by CI at build time — never committed |
+| Per-environment config | MFE `.env` files live in a restricted config bucket and are fetched by CI at build time, never committed |
 | Rotation | All credentials exposed at any point in history were rotated during the audit remediation |
 | State protection | Terraform state buckets are private, versioned, and encrypted (state contains sensitive values) |
 
@@ -41,13 +41,13 @@ An independent, full-read security audit covered all four platform repositories 
 
 **Remediation highlights:**
 
-- Every one of the 75 findings was fixed and verified — none were deferred or accepted as residual risk.
+- Every one of the 75 findings was fixed and verified, none were deferred or accepted as residual risk.
 - All credentials that had ever appeared in repositories were **rotated**.
 - **Git history was scrubbed** to remove historical secrets.
 - Secrets handling was re-architected around AWS Secrets Manager and CI-fetched environment files (see table above).
 - Infrastructure guardrails were tightened: encrypted and versioned state, restricted egress, S3 versioning, and WAF coverage.
 
-Detailed findings documents are internal engineering material; this page is the client-facing summary. The audit process is now part of the delivery playbook — each new deployment inherits the post-audit posture by construction.
+Detailed findings documents are internal engineering material; this page is the client-facing summary. The audit process is now part of the delivery playbook, each new deployment inherits the post-audit posture by construction.
 
 ## Ongoing practices
 

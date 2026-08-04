@@ -1,6 +1,6 @@
 # ⚡ Get running in 5 minutes
 
-Run all three LXS Univo micro-frontends (MFEs) on your machine — install, start, log in. Every command below is copy-pasteable.
+Run all three LXS Univo micro-frontends (MFEs) on your machine, install, start, log in. Every command below is copy-pasteable.
 
 {% hint style="success" %}
 **The promise:** by the end of this page you have the learner app, admin console and auth service running locally, and you're logged in end to end.
@@ -15,14 +15,14 @@ Run all three LXS Univo micro-frontends (MFEs) on your machine — install, star
 | 🛠️ Admin console | `lms-mfe-admin` | http://localhost:3000/v2-admin | Platform administration |
 
 {% hint style="warning" %}
-**Always log in through the auth MFE first.** Only `/auth` has a login UI — the learner app and admin console validate the JWT in `localStorage` on bootstrap and bounce you to `/auth` when it's missing or expired.
+**Always log in through the auth MFE first.** Only `/auth` has a login UI, the learner app and admin console validate the JWT in `localStorage` on bootstrap and bounce you to `/auth` when it's missing or expired.
 {% endhint %}
 
 ## ✅ Prerequisites
 
-- **Node.js 18+** — CI uses Node 18 for admin, Node 24 for app/auth; anything 18+ works locally
-- **npm with `--legacy-peer-deps`** — the React 17-era dependency tree has peer ranges modern npm rejects by default
-- **An `.env` file per MFE** — not in git; copy your environment's template into each repo root (ask your team lead for the dev template). **Never commit it.**
+- **Node.js 18+**, CI uses Node 18 for admin, Node 24 for app/auth; anything 18+ works locally
+- **npm with `--legacy-peer-deps`**, the React 17-era dependency tree has peer ranges modern npm rejects by default
+- **An `.env` file per MFE**, not in git; copy your environment's template into each repo root (ask your team lead for the dev template). **Never commit it.**
 
 {% hint style="info" %}
 **Auth MFE only:** `react-scripts` 5 needs OpenSSL 3 compatibility on modern Node. The repo's `start`/`build` scripts already set `NODE_OPTIONS=--openssl-legacy-provider`; if you invoke webpack outside those scripts, export it yourself.
@@ -75,13 +75,13 @@ All variables are CRA-style `REACT_APP_*`, inlined at build time. The essentials
 | Variable | Purpose |
 |---|---|
 | `REACT_APP_GQL_ENDPOINT` | GraphQL API endpoint (all data) |
-| `REACT_APP_AUTH_ENDPOINT` | Auth MFE URL — redirect target when unauthenticated |
+| `REACT_APP_AUTH_ENDPOINT` | Auth MFE URL, redirect target when unauthenticated |
 | `REACT_APP_APP_ENDPOINT` / `REACT_APP_ADMIN_ENDPOINT` | Cross-MFE URLs (post-login redirect, impersonation handoff) |
 | `REACT_APP_SITE_NAME` | Tenant/site slug (Pusher events, S3 paths, theming) |
 | `REACT_APP_PUSHER_KEY` / `REACT_APP_PUSHER_CLUSTER` | Realtime chat connection |
-| `REACT_APP_BASE_URL` | Open edX LMS base URL (staff session, asset rewriting) |
+| `REACT_APP_BASE_URL` | Course-engine LMS base URL (staff session, asset rewriting) |
 
-💡 Prefer sourcing env vars from a file rather than a committed `.env`? The repos also support `npm run build:dev` (sources `./.env.development`) and `npm run build:prod` (sources `./.env.production`) — see each repo's README.
+💡 Prefer sourcing env vars from a file rather than a committed `.env`? The repos also support `npm run build:dev` (sources `./.env.development`) and `npm run build:prod` (sources `./.env.production`), see each repo's README.
 
 ## ✅ Tests and lint
 
@@ -106,6 +106,6 @@ npm run lint       # ESLint (lms-mfe-app)
 
 ## What's next?
 
-- 🧭 [Platform Overview](platform-overview.md) — why the platform is built this way
-- 🏗️ [System Architecture](../architecture/system-architecture.md) — how the pieces fit together
-- 🔧 [MFE Configuration](../configuration/mfe-configuration.md) — the full environment variable reference
+- 🧭 [Platform Overview](platform-overview.md), why the platform is built this way
+- 🏗️ [System Architecture](../architecture/system-architecture.md), how the pieces fit together
+- 🔧 [MFE Configuration](../configuration/mfe-configuration.md), the full environment variable reference

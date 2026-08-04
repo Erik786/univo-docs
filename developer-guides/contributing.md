@@ -2,7 +2,7 @@
 
 Standards for contributing to any LXS Univo repository (MFEs, Terraform, docs).
 
-## Commit messages — Conventional Commits
+## Commit messages, Conventional Commits
 
 Format: `<type>(<optional scope>): <short imperative summary>`
 
@@ -24,7 +24,7 @@ Keep commits focused: one logical change per commit.
 1. Branch from `main`: `git checkout -b feat/my-change main`
 2. Keep the branch small and rebased on `main`.
 3. Open a PR with a clear description: what, why, how tested, screenshots for UI changes.
-4. **QA review is required before merge** — every PR needs at least one reviewer approval; UI changes need a QA pass on a deployed build or local run.
+4. **QA review is required before merge**, every PR needs at least one reviewer approval; UI changes need a QA pass on a deployed build or local run.
 5. Squash-merge once approved; delete the branch.
 
 ## Before opening a PR
@@ -42,7 +42,7 @@ npm test         # must pass; add tests for logic changes in utils/context/redux
 - **Never commit** `.env` files, `*.pem` keys, AWS credentials, JWTs, or filled `terraform.tfvars`. Environment config is distributed via the S3 config bucket, not git.
 - **Sanitize HTML**: never inject API/user content with `dangerouslySetInnerHTML` without sanitizing first. Follow the escaping pattern in `src/pages/board/problems/RenderResponsePrompt.jsx` (lms-mfe-app).
 - Changes to credential handling, token storage, redirect logic, or the password-reset flow require explicit review.
-- Direct-to-S3 upload credentials (`REACT_APP_S3_*`) are known tech debt — do not expand their use; pre-signed URLs are the target design.
+- Direct-to-S3 upload credentials (`REACT_APP_S3_*`) are known tech debt, do not expand their use; pre-signed URLs are the target design.
 
 ## Design standards
 
