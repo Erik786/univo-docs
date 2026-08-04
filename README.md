@@ -84,10 +84,6 @@
 - **Operations?** Go to [Deployment & Runbooks](deployment/deployment-guide.md)
 - **Where are we going?** Read the [Product Roadmap](roadmap/README.md)
 
-## Clients & references
-
-First enterprise deployment: a leading African financial institution (financial education platform for women entrepreneurs).
-
 ---
 
-*LXS Univo is developed and maintained by Pantheon Group. For sales inquiries: contact Erik / Joel Mamihery.*
+*LXS Univo is developed and maintained by Index Group. 
