@@ -36,6 +36,7 @@
 * [💬 Social Learning](product/social-learning.md)
 * [📴 Offline-First Learning](product/offline-first.md)
 * [✍️ Studio — Content Creation](product/studio.md)
+* [🛠️ Authoring Tools Ecosystem](product/authoring-tools.md)
 
 ## 🗺️ Roadmap
 * [🗺️ Product Roadmap](roadmap/README.md)
@@ -45,3 +46,4 @@
 ## 📋 API Reference
 * [🔌 GraphQL API](api-reference/graphql.md)
 * [🔗 Integrations](api-reference/integrations.md)
+* [🔌 E-Learning Standards](api-reference/standards.md)
