@@ -38,6 +38,9 @@
 * [🔭 Future Development](roadmap/future-development.md)
 * [📝 Changelog](roadmap/changelog.md)
 
+## 🌍 Translations
+* [🌍 Translation plan (EN/FR)](translations/STRUCTURE.md)
+
 ## 📋 API Reference
 * [🔌 GraphQL API](api-reference/graphql.md)
 * [🔗 Integrations](api-reference/integrations.md)

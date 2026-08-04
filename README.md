@@ -5,6 +5,8 @@
 [![Get started](https://img.shields.io/badge/%F0%9F%9A%80_Get%20started-FE7B49?style=for-the-badge)](getting-started/quickstart.md)
 [![View on GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Erik786/univo-docs)
 
+*Documentation available in English, version française en cours.*
+
 ---
 
 ## Explore the platform
