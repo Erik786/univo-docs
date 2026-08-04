@@ -6,6 +6,8 @@ LXS Univo serves four audiences — **Learners**, **Coaches**, **Admins** and **
 **One platform, four experiences.** Nobody wades through someone else's UI: learners learn, coaches coach, admins administer, authors author.
 {% endhint %}
 
+![LXS Univo admin dashboard — user, group, course and license management in one console](../.gitbook/assets/dashboard-admin.jpg)
+
 ## 🎓 Learner
 
 | Feature | What it does |

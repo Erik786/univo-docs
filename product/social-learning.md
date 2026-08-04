@@ -1,6 +1,8 @@
-# Social Learning
+# 💬 Social Learning
 
 Learning sticks when it's social. LXS Univo ships with real-time communication built in — not bolted on.
+
+![Virtual class — live video sessions run on the integrated Jitsi instance, inside the platform](../.gitbook/assets/virtual-class.jpg)
 
 ## 💬 Coach Chat
 

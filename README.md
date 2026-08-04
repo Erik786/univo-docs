@@ -1,31 +1,58 @@
-# 📚 LXS Univo — Documentation
+# 📚 LXS Univo
 
-**Learning anytime, anywhere — with the right content.** Product, platform & deployment documentation for LXS Univo, the production-proven LMS built on Open edX, deployable per client in 3 weeks.
+**Learning anytime, anywhere — with the right content.** The production-proven LMS built on Open edX, deployable per client in 3 weeks.
 
-[![Docs](https://img.shields.io/badge/Docs-live-success?logo=gitbook&logoColor=white)](https://github.com/Erik786/univo-docs)
-[![GitBook](https://img.shields.io/badge/GitBook-synced-blue?logo=gitbook&logoColor=white)](https://github.com/Erik786/univo-docs)
-[![Open edX](https://img.shields.io/badge/Open%20edX-Ulmo-02262B)](https://openedx.org)
-[![React](https://img.shields.io/badge/React-17-61DAFB?logo=react&logoColor=white)](https://react.dev)
-[![Terraform](https://img.shields.io/badge/IaC-Terraform-7B42BC?logo=terraform&logoColor=white)](https://terraform.io)
-[![License](https://img.shields.io/badge/License-Proprietary-red)](#)
+[![Get started](https://img.shields.io/badge/%F0%9F%9A%80_Get%20started-FE7B49?style=for-the-badge)](getting-started/quickstart.md)
+[![View on GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Erik786/univo-docs)
 
 ---
 
-## 🧭 Part of LXS Univo
+## Explore the platform
 
-| Repo | Role |
-|---|---|
-| 🎓 [lms-mfe-app](https://github.com/Erik786/lms-mfe-app) | Learner app (`/app`) |
-| 🛠️ [lms-mfe-admin](https://github.com/Erik786/lms-mfe-admin) | Admin panel (`/v2-admin`) |
-| 🔑 [lms-mfe-auth](https://github.com/Erik786/lms-mfe-auth) | Auth MFE (`/auth`) |
-| 🏗️ [lms-terraform](https://github.com/Erik786/lms-terraform) | AWS infrastructure as code |
-| 👉 **[univo-docs](https://github.com/Erik786/univo-docs)** | Product & platform documentation (this repo) |
-
-🌐 **Published site:** this repo syncs automatically to GitBook — the rendered documentation is the public LXS Univo docs site.
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎓 Learner App</h3>
+      <p>Fast, mobile-first React interface. Courseware player, progress tracking, certificates, coach chat — all in <code>/app</code>.</p>
+      <p><a href="developer-guides/mfe-app.md">Developer guide →</a></p>
+      <img src=".gitbook/assets/dashboard-admin.jpg" alt="LXS Univo admin dashboard" />
+    </td>
+    <td width="50%">
+      <h3>🎥 Virtual Class</h3>
+      <p>Live sessions on integrated Jitsi. Coaches host cohort video calls inside the platform — no external tool.</p>
+      <p><a href="product/social-learning.md">Social learning →</a></p>
+      <img src=".gitbook/assets/virtual-class.jpg" alt="LXS Univo virtual class" />
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🏗️ Architecture</h3>
+      <p>Micro-frontends on Open edX, GraphQL on AWS Lambda, Terraform-managed infrastructure. You own every layer.</p>
+      <p><a href="architecture/system-architecture.md">System overview →</a></p>
+    </td>
+    <td width="50%">
+      <h3>☁️ Deploy in 3 weeks</h3>
+      <p>Repeatable delivery playbook: prerequisites, Terraform apply, Tutor deploy, DNS cutover, go-live checklist.</p>
+      <p><a href="deployment/deployment-guide.md">Deployment guide →</a></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🌱 Social Learning</h3>
+      <p>Real-time coach chat, course comments, live sessions — community features built in, not bolted on.</p>
+      <p><a href="product/social-learning.md">See features →</a></p>
+    </td>
+    <td width="50%">
+      <h3>🗺️ Roadmap</h3>
+      <p>Offline-first learning, thematic groups, learner networking — see where the platform is heading next.</p>
+      <p><a href="roadmap/README.md">Public roadmap →</a></p>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 🚀 Why LXS Univo?
+## Why LXS Univo?
 
 - **Proven in production** — serving learners today, not a prototype
 - **Deployed in 3 weeks** — a repeatable, documented delivery playbook
@@ -34,7 +61,7 @@
 - **Offline-ready roadmap** — learning continues even with unstable connectivity
 - **Your infrastructure** — deployed in YOUR AWS account, you own everything
 
-## 🏗️ Platform at a glance
+## Platform at a glance
 
 | Component | Technology |
 |---|---|
@@ -47,7 +74,7 @@
 | Video | Vimeo Pro + Jitsi (live sessions) |
 | Infrastructure | Terraform on AWS (EC2, RDS, DocumentDB, CloudFront, WAF) |
 
-## 🗺️ Documentation map
+## Documentation map
 
 - **New here?** Start with the [Platform Overview](getting-started/platform-overview.md)
 - **A client?** See [What You Get](getting-started/for-clients.md) and [Client Prerequisites](deployment/client-prerequisites.md)
@@ -55,17 +82,7 @@
 - **Operations?** Go to [Deployment & Runbooks](deployment/deployment-guide.md)
 - **Where are we going?** Read the [Product Roadmap](roadmap/README.md)
 
-## 📖 How this documentation works
-
-- **GitHub is the source of truth.** Every page in this repo is plain markdown, reviewed like code.
-- **GitBook syncs automatically.** A GitHub → GitBook integration publishes every merge to `main` to the public docs site — no manual publishing step.
-- **Contributing:**
-  1. Create a branch, edit or add markdown pages (keep links relative, e.g. `getting-started/quickstart.md`).
-  2. Open a Pull Request — content and structure (including `SUMMARY.md`, the GitBook table of contents) are reviewed there.
-  3. Merge to `main` → the site updates itself within minutes.
-- New page? Add it to `SUMMARY.md` or it won't appear in the GitBook navigation.
-
-## 🌱 Clients & references
+## Clients & references
 
 First enterprise deployment: **Baobab Banque Madagascar** (AMPELA Connect — financial education platform for women entrepreneurs).
 
