@@ -12,6 +12,8 @@ Reference: https://unsloth.ai/docs. Every page in univo-docs follows these rules
 7. **"What's next?" footer** — 2-3 links to the logical next pages
 
 ## Writing rules
+- **No em-dashes (—). Ever.** They read as AI-generated. Use commas, colons, or short sentences.
+- **Deployment claim**: the platform deploys IN A FEW HOURS. The 3-week window covers only the full enterprise project with client dependencies (DNS, branding, content). Never write "deployed in 3 weeks" as the headline.
 - **Complete, runnable examples** — never `...` or pseudo-code in quickstarts
 - **Tables for choices** — any "X vs Y" becomes a comparison table
 - **Emojis in headers** — consistent vocabulary: ⚡ quickstart, 🏗️ architecture, 🔧 config, 🔒 security, 🚀 deploy, 💡 tips, ⚠️ warnings, ✅ done, 🐛 troubleshooting
