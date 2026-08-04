@@ -65,6 +65,61 @@ LXS Univo serves four audiences — **Learners**, **Coaches**, **Admins** and **
 💡 **Why it matters:** authors get the same battle-tested Studio that powers edX.org — no proprietary editor to learn, no content lock-in.
 {% endhint %}
 
+## 🔐 Roles & permissions at a glance
+
+Every capability on the platform maps to one of three roles. Assign the right role and each person sees exactly the tools they need — nothing more.
+
+| Capability | 🛠️ Admin | ✍️ Contributor (Trainer) | 🎓 Learner |
+|---|:---:|:---:|:---:|
+| Manage access rights & roles | ✅ | — | — |
+| Create users (via licenses) | ✅ | — | — |
+| Send email invitations | ✅ | — | — |
+| Create learner groups & cohorts by level | ✅ | ✅ | — |
+| Track individual learner progress | ✅ | ✅ | — |
+| Track progress across all learners | ✅ | ✅ | — |
+| Answer learner questions | ✅ | ✅ | — |
+| Add / remove course content | ✅ | ✅ | — |
+| Author course modules & quizzes (Studio) | ✅ | ✅ | — |
+| Import external content (SCORM, HTML5, PDF, video, Google Docs) | ✅ | ✅ | — |
+| Grade exercises | ✅ | ✅ | — |
+| Moderate forums & comments | ✅ | ✅ | — |
+| Personal dashboard | ✅ | ✅ | ✅ |
+| Follow self-paced courses 24/7 | ✅ | ✅ | ✅ |
+| Attend live virtual classes | ✅ | ✅ | ✅ |
+| Take placement tests, quizzes & final assessments | — | — | ✅ |
+| Message the support team | ✅ | ✅ | ✅ |
+| Forums & comment tools | ✅ | ✅ | ✅ |
+| Download & print course resources | ✅ | ✅ | ✅ |
+
+{% hint style="info" %}
+💡 **Why it matters:** clean role separation means a trainer can't accidentally break platform settings, and a learner is never confronted with an admin UI. Autonomy for everyone, risk for no one.
+{% endhint %}
+
+## ♿ Accessibility (RGAA) & responsive design
+
+The platform is built to be usable by everyone, on any device — accessibility is a feature, not an afterthought.
+
+| Area | Compliance |
+|---|---|
+| 🖼️ Images | Alt text and decorative-image handling per RGAA criteria |
+| 🖼️ Frames | Properly titled and navigable |
+| 🎨 Colors | Sufficient contrast; information never conveyed by color alone |
+| 📊 Tables | Structured with headers for screen readers |
+| 🔗 Links | Explicit, distinguishable, keyboard-operable |
+| 🧱 Information structure | Semantic headings and landmark regions |
+| 📝 Forms | Labeled fields, error identification, keyboard completion |
+| 🧭 Navigation | Skip links, consistent menus, full keyboard access |
+
+Plus, everywhere it counts:
+
+- 📱 **Fully responsive** — mobile, tablet and desktop get a native-feeling experience
+- 💬 **Synchronized subtitles** on video learning content
+- 🔌 **No installation** — the SaaS platform runs in the browser, 24/7, from any device
+
+{% hint style="success" %}
+**Differentiator:** RGAA-compliant accessibility and subtitled video content open your training programs to every learner — including audiences most LMSes leave behind.
+{% endhint %}
+
 ---
 
 *Feature availability can vary per deployment and license tier. Contact your platform administrator for details.*

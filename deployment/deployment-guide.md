@@ -10,6 +10,21 @@ Deploy a new customer platform end to end in 15 working days — infrastructure,
 **Prerequisite gate:** all items in [Client Prerequisites](client-prerequisites.md) must be delivered before Day 1. A missing AWS sub-account or DNS delegation stalls everything downstream.
 {% endhint %}
 
+## 📅 Delivery timeline at a glance
+
+| Phase | What happens | When |
+|---|---|---|
+| 📝 **Order** | Platform list confirmed, admin contacts named, brand assets (logo, colors) collected | **J0** |
+| 🏗️ **Construction** | LMS configured, internal tests, branding and personalization applied | **J0 → J+2** |
+| 📦 **Delivery** | Platform handed over, admin licenses and access codes issued | **J+3** |
+| 🛠️ **Admin training** | Video-conference workshops: account setup, license allocation, test live class | **J+5** |
+| 🎓 **Trainer training** | Workshops on course authoring: building paths, importing external content, quizzes | **J+10** |
+| 🤝 **Ongoing support** | Continuous: support requests, personalization help, messaging configuration — for the life of the contract | **Continuous** |
+
+{% hint style="info" %}
+💡 **Dates flex to your calendar.** Every milestone above can shift to match your organization's schedule and the availability of your teams — the sequence stays, the dates adapt.
+{% endhint %}
+
 ## 🏗️ Week 1 — Infrastructure (Terraform)
 
 1. **Day 1 — Prerequisites & secrets.** Confirm prerequisites; create the client `.env` macros file; store credentials in Secrets Manager / config bucket. *Verify:* checklist signed off; `.env` uploaded to `s3://<config-bucket>/<env>/`.

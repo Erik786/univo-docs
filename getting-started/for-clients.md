@@ -49,6 +49,34 @@ To hit the timeline, four things (detailed in [Client Prerequisites](../deployme
 **Compare before you commit:** SaaS LMSes typically charge per active learner per month. At 1,000 learners, the platform pays for itself against most per-seat pricing within the first year — and the gap widens every year after.
 {% endhint %}
 
+## 🛡️ Trust & compliance
+
+| Proof point | Detail |
+|---|---|
+| 🎓 **17,000+ learners trained** | A delivery track record across corporate and institutional training programs |
+| 🏅 **Qualiopi, ICPF & DataDock certified** | French quality certifications for professional training organizations |
+| 🔒 **ISO/IEC 27001, 27017 & 27018** | Infrastructure security, cloud security and personal-data protection — inherited from the AWS platform |
+| ⭐ **CSA STAR (CCM v4.0)** | Cloud Security Alliance assurance for the underlying AWS infrastructure |
+| 🇫🇷 **EdTech & French Tech member** | Active in the French education-technology ecosystem |
+
+{% hint style="success" %}
+**Why it matters for procurement:** quality certifications (Qualiopi/ICPF/DataDock) plus ISO-grade cloud security mean the platform clears both training-funding and IT-security due diligence.
+{% endhint %}
+
+## 🆘 Support options available
+
+| Service | Commitment |
+|---|---|
+| ⚡ Platform incident response (GTI) | **24h max** intervention on platform-side issues |
+| 🎧 Learner technical support | **2h max** response on access, navigation and usage issues |
+| 🚑 Blocking-incident fallback | A fresh platform can be **redeployed in under 3h** so learners keep access while the incident is resolved |
+| 🎫 Incident management | Ticket-based tracking — every request is logged, prioritized (low/medium/high) and followed to closure |
+| 👥 Dedicated team | Technical support, pedagogical support and a digital project manager, reachable 5 days a week by phone, chat or email |
+
+{% hint style="info" %}
+💡 **Support is structured, not ad hoc.** Tickets, priorities and a named project contact mean nothing falls through the cracks — and you get a regular activity report on requests and resolutions.
+{% endhint %}
+
 ## 🚀 After go-live
 
 - **🔑 You own everything** — code, infrastructure, data
