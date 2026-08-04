@@ -1,69 +1,76 @@
-# 🎓 Feature Catalog
+# ✨ Features
 
-LXS Univo serves four audiences — **Learners**, **Coaches**, **Admins** and **Authors** — each with a purpose-built surface: the Learner app (`/app`), the Admin console (`/v2-admin`), the Auth service (`/auth`), and Open edX Studio for content creation.
+**Everything you expect from a modern LMS — built on the open-source Open edX engine powering 45M+ learners worldwide.**
+
+No lock-in, no proprietary editor, no feature paywall: every capability below ships natively in LXS Univo, ready on day one.
+
+---
+
+## 🎨 Créez vos formations — Create
+
+Build rich learning content with the same Studio that powers edX.org.
+
+| | |
+|---|---|
+| 🌳 **Séquences pédagogiques** | Structure your courses as an intuitive tree — sections, subsections, units — so learners always know where they are and what comes next. |
+| 📦 **SCORM packages** | Import your existing SCORM 1.2 or 2004 content in one click — scores and progress are tracked automatically, nothing is lost. |
+| 🎥 **Video hosting** | Upload your videos straight to LXS (streamed through our Vimeo pipeline) or keep using your own platforms — YouTube, Vimeo, wherever your content lives. |
+| 🌐 **HTML5 & iFrame** | Embed any web content — interactive simulations, external tools, rich media — directly inside a course via iFrame, JavaScript or custom xBlocks. |
+| 🧩 **Content libraries** | Build your content once, reuse it across as many courses as you like — update it in one place and every course stays in sync. |
 
 {% hint style="success" %}
-**One platform, four experiences.** Nobody wades through someone else's UI: learners learn, coaches coach, admins administer, authors author.
+**Why it matters:** you never rebuild content you already own. SCORM, videos, web embeds — everything you created before LXS works in LXS.
 {% endhint %}
+
+## 📝 Évaluez et certifiez — Assess
+
+Measure real skills, then prove them with credentials learners are proud to share.
+
+| | |
+|---|---|
+| 📝 **Quizzes & auto-graded exercises** | Single and multiple choice, text or number input, dropdowns, drag & drop — graded instantly, with feedback the moment the learner answers. |
+| 🎲 **Randomized question banks & time limits** | Draw questions at random from a bank and set a timer — every learner gets a different exam, and cheating becomes pointless. |
+| 📤 **Assignment submission** | Collect file uploads or free-text work and grade it by hand when a human eye matters — essays, projects, case studies. |
+| 🏅 **Certificates** | Fully customizable certificates, exportable as PDF, shareable on LinkedIn in one click — and verifiable Open Badges micro-credentials that employers can check. |
+
+{% hint style="success" %}
+**Why it matters:** auto-grading saves trainer hours, randomization keeps assessments honest, and verifiable credentials give your training real market value.
+{% endhint %}
+
+## 🚀 Diffusez et planifiez — Deliver
+
+Open the right course, to the right audience, at the right time — automatically.
+
+| | |
+|---|---|
+| 👥 **Learner groups & cohorts** | Segment your audiences into groups and adapt content, pacing and access for each — one course, many journeys. |
+| 📅 **Session scheduling** | Open and close courses by start and end dates, and gate progression with prerequisites — your training calendar runs itself. |
+| 🔒 **Private, public or paid courses** | Choose the enrollment mode that fits: internal-only, open to external learners, or paid access — per course, per audience. |
+| 🎥 **Live sessions & replays** | Run virtual classes with Jitsi built in, or plug in Zoom, Teams or Meet — attendance is tracked automatically (*émargement* ready), and replays stay available. |
+
+{% hint style="success" %}
+**Why it matters:** scheduling, gating and enrollment modes are set once — after that the platform delivers, opens and closes sessions while you focus on teaching.
+{% endhint %}
+
+## 💬 Animez et suivez — Engage & Track
+
+Keep learners motivated, and prove the impact to your funders.
+
+| | |
+|---|---|
+| 💬 **Discussion forums** | Structured discussion spaces per course and per cohort — learners help each other, trainers moderate, knowledge stays searchable. |
+| 💬 **Real-time chat** | Instant messaging built right into the platform (our own Pusher-powered addition beyond standard Open edX) — a learner in difficulty is one message away from help. |
+| 📧 **Emails & notifications** | Automated reminders nudge late learners back on track — before they quietly give up. |
+| 🧑‍🏫 **Coaches** | Assign a dedicated coach as the contact point for each learner group — every learner knows exactly who to turn to. |
+| 📊 **Reporting** | Grades and progress per learner and per course, daily time-spent tracking (funder-ready), certificate exports and learner lists with tags and groups — export to Excel, CSV or PDF, or pull everything through the GraphQL API. |
+
+{% hint style="success" %}
+**Why it matters:** dropout prevention is proactive, not reactive — reminders fire automatically, coaches see who's stuck, and funders get the time-spent reports they ask for, without a single spreadsheet stitched by hand.
+{% endhint %}
+
+---
 
 ![LXS Univo admin dashboard — user, group, course and license management in one console](../.gitbook/assets/dashboard-admin.jpg)
-
-## 🎓 Learner
-
-| Feature | What it does |
-|---|---|
-| 📚 Courseware player | Sequential course navigation built on Open edX xBlocks: html, problem, SCORM, LTI, google-document, Vimeo video |
-| 📈 Progress tracking | Per-unit and per-course completion state, synced to the GraphQL API in real time |
-| 🏆 Certificates (PDF) | Downloadable PDF certificates on course completion |
-| 💬 Coach chat | Real-time 1:1 messaging with an assigned coach (Pusher) |
-| 📊 Analytics reports | Personal progress dashboards and exportable reports (Highcharts visualizations) |
-| 📴 Offline download review | Downloaded course content can be reviewed offline — see [Offline-First](offline-first.md) |
-| 🌍 Internationalization | 6 locales: `uk`, `fr` (default), `de`, `es-419`, `zh-CN`, `ar` |
-| 🌗 Light/dark theme | User-selectable theme, persisted per account |
-
-{% hint style="info" %}
-💡 **Why it matters:** a learner who can message their coach, see their own progress and pick up where they left off on any device is a learner who finishes the course.
-{% endhint %}
-
-## 💬 Coach
-
-| Feature | What it does |
-|---|---|
-| 💬 Coach chat | Real-time conversation with assigned learners over Pusher channels |
-| 👀 Learner follow-up | Cohort view of learner progress, completion and activity for proactive support |
-
-{% hint style="info" %}
-💡 **Why it matters:** coaches intervene before learners drop out — the follow-up view surfaces who's stuck before they disengage.
-{% endhint %}
-
-## 🛠️ Admin
-
-| Feature | What it does |
-|---|---|
-| 👥 User management | Create, edit, deactivate users; role assignment |
-| 🧑‍🤝‍🧑 Group management | Organize learners into groups and cohorts |
-| 📚 Course management | Assign courses, manage enrollments, monitor completion |
-| 🗂️ Catalog management | Curate the course catalog visible to each audience |
-| 🪪 Licenses | Allocate and track seat licenses per client organization |
-| 👻 Ghost / impersonation | View the platform as a specific user for support purposes (fully audited) |
-| ⚙️ Settings | Platform configuration per deployment |
-| 🎨 Theming | Brand colors, logos and white-label options per client |
-
-{% hint style="info" %}
-💡 **Why it matters:** the admin console is where a platform earns its keep — licenses, catalogs and theming are self-service, so clients run their platform without filing tickets.
-{% endhint %}
-
-## ✍️ Author
-
-| Feature | What it does |
-|---|---|
-| 🏗️ Studio | Full Open edX Studio for course authoring — see [Content Creation with Studio](studio.md) |
-| 🧱 xBlock library | html, problem, scorm, lti, google-document, vimeo video components |
-| 📦 SCORM import | Package and publish SCORM content directly into courses |
-
-{% hint style="info" %}
-💡 **Why it matters:** authors get the same battle-tested Studio that powers edX.org — no proprietary editor to learn, no content lock-in.
-{% endhint %}
 
 ## 🔐 Roles & permissions at a glance
 
