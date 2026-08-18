@@ -6,13 +6,13 @@ No lock-in, no proprietary editor, no feature paywall: every capability below sh
 
 ---
 
-## 🎨 Créez vos formations, Create
+## 🎨 Create your courses
 
 Build rich learning content with a proven, world-class Studio authoring environment.
 
 | | |
 |---|---|
-| 🌳 **Séquences pédagogiques** | Structure your courses as an intuitive tree, sections, subsections, units, so learners always know where they are and what comes next. |
+| 🌳 **Learning sequences** | Structure your courses as an intuitive tree, sections, subsections, units, so learners always know where they are and what comes next. |
 | 📦 **SCORM packages** | Import your existing SCORM 1.2 or 2004 content in one click, scores and progress are tracked automatically, nothing is lost. |
 | 🎥 **Video hosting** | Upload your videos straight to LXS (streamed through our Vimeo pipeline) or keep using your own platforms, YouTube, Vimeo, wherever your content lives. |
 | 🌐 **HTML5 & iFrame** | Embed any web content, interactive simulations, external tools, rich media, directly inside a course via iFrame, JavaScript or custom xBlocks. |
@@ -22,7 +22,7 @@ Build rich learning content with a proven, world-class Studio authoring environm
 **Why it matters:** you never rebuild content you already own. SCORM, videos, web embeds, everything you created before LXS works in LXS.
 {% endhint %}
 
-## 📝 Évaluez et certifiez, Assess
+## 📝 Assess and certify
 
 Measure real skills, then prove them with credentials learners are proud to share.
 
@@ -37,7 +37,7 @@ Measure real skills, then prove them with credentials learners are proud to shar
 **Why it matters:** auto-grading saves trainer hours, randomization keeps assessments honest, and verifiable credentials give your training real market value.
 {% endhint %}
 
-## 🚀 Diffusez et planifiez, Deliver
+## 🚀 Deliver and schedule
 
 Open the right course, to the right audience, at the right time, automatically.
 
@@ -46,13 +46,13 @@ Open the right course, to the right audience, at the right time, automatically.
 | 👥 **Learner groups & cohorts** | Segment your audiences into groups and adapt content, pacing and access for each, one course, many journeys. |
 | 📅 **Session scheduling** | Open and close courses by start and end dates, and gate progression with prerequisites, your training calendar runs itself. |
 | 🔒 **Private, public or paid courses** | Choose the enrollment mode that fits: internal-only, open to external learners, or paid access, per course, per audience. |
-| 🎥 **Live sessions & replays** | Run virtual classes with Jitsi built in, or plug in Zoom, Teams or Meet, attendance is tracked automatically (*émargement* ready), and replays stay available. |
+| 🎥 **Live sessions & replays** | Run virtual classes with Jitsi built in, or plug in Zoom, Teams or Meet, attendance is tracked automatically (attendance tracking ready), and replays stay available. |
 
 {% hint style="success" %}
 **Why it matters:** scheduling, gating and enrollment modes are set once, after that the platform delivers, opens and closes sessions while you focus on teaching.
 {% endhint %}
 
-## 💬 Animez et suivez, Engage & Track
+## 💬 Engage and track
 
 Keep learners motivated, and prove the impact to your funders.
 
@@ -78,22 +78,22 @@ Every capability on the platform maps to one of three roles. Assign the right ro
 
 | Capability | 🛠️ Admin | ✍️ Contributor (Trainer) | 🎓 Learner |
 |---|:---:|:---:|:---:|
-| Manage access rights & roles | ✅ |, |, |
-| Create users (via licenses) | ✅ |, |, |
-| Send email invitations | ✅ |, |, |
-| Create learner groups & cohorts by level | ✅ | ✅ |, |
-| Track individual learner progress | ✅ | ✅ |, |
-| Track progress across all learners | ✅ | ✅ |, |
-| Answer learner questions | ✅ | ✅ |, |
-| Add / remove course content | ✅ | ✅ |, |
-| Author course modules & quizzes (Studio) | ✅ | ✅ |, |
-| Import external content (SCORM, HTML5, PDF, video, Google Docs) | ✅ | ✅ |, |
-| Grade exercises | ✅ | ✅ |, |
-| Moderate forums & comments | ✅ | ✅ |, |
+| Manage access rights & roles | ✅ | | |
+| Create users (via licenses) | ✅ | | |
+| Send email invitations | ✅ | | |
+| Create learner groups & cohorts by level | ✅ | ✅ | |
+| Track individual learner progress | ✅ | ✅ | |
+| Track progress across all learners | ✅ | ✅ | |
+| Answer learner questions | ✅ | ✅ | |
+| Add / remove course content | ✅ | ✅ | |
+| Author course modules & quizzes (Studio) | ✅ | ✅ | |
+| Import external content (SCORM, HTML5, PDF, video, Google Docs) | ✅ | ✅ | |
+| Grade exercises | ✅ | ✅ | |
+| Moderate forums & comments | ✅ | ✅ | |
 | Personal dashboard | ✅ | ✅ | ✅ |
 | Follow self-paced courses 24/7 | ✅ | ✅ | ✅ |
 | Attend live virtual classes | ✅ | ✅ | ✅ |
-| Take placement tests, quizzes & final assessments |, |, | ✅ |
+| Take placement tests, quizzes & final assessments | | | ✅ |
 | Message the support team | ✅ | ✅ | ✅ |
 | Forums & comment tools | ✅ | ✅ | ✅ |
 | Download & print course resources | ✅ | ✅ | ✅ |

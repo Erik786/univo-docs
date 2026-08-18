@@ -45,4 +45,4 @@ Mathematical notation renders through **MathJax**:
 
 ---
 
-*A Studio Reliability Program (monitoring, save-failure elimination, SCORM pipeline improvements) is committed for Q4 2026, see the [roadmap](../roadmap/README.md).*
+*Studio reliability improvements (monitoring, save-failure elimination, SCORM pipeline improvements) are on the [product roadmap](../roadmap/README.md).*

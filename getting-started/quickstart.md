@@ -108,4 +108,4 @@ npm run lint       # ESLint (lms-mfe-app)
 
 - 🧭 [Platform Overview](platform-overview.md), why the platform is built this way
 - 🏗️ [System Architecture](../architecture/system-architecture.md), how the pieces fit together
-- 🔧 [MFE Configuration](../configuration/mfe-configuration.md), the full environment variable reference
+- 🔧 [MFE App Configuration](../developer-guides/mfe-app.md), the full environment variable reference

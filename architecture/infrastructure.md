@@ -56,7 +56,7 @@ Indicative cost for a single pilot platform (100–1,000 active learners, single
 
 | Item | Sizing assumption | Est. USD/month |
 |---|---|---|
-| EC2 (Open edX / Tutor) | 1 × t3.large, 24/7 | ~60 |
+| EC2 (Open edX / Tutor) | 1 × t3.medium, 24/7 | ~60 |
 | RDS MySQL | db.t3.medium, single-AZ | ~50 |
 | DocumentDB | db.t3.medium, 1 instance | ~55 |
 | ALB | 1 ALB + modest LCU usage | ~20 |
@@ -66,7 +66,7 @@ Indicative cost for a single pilot platform (100–1,000 active learners, single
 | Misc (WAF, Secrets Manager, CloudWatch, backups) | baseline rules + alarms | ~15 |
 | **Total** | | **~250** |
 
-Pilot deployments land in the **225–300 USD/month** range depending on region (e.g. af-south-1 runs slightly above average) and data transfer. Scaling tiers beyond the pilot are defined in [ADR-0004](decisions/ADR-0004-scale-200M.md).
+Pilot deployments land in the **225–300 USD/month** range depending on region (e.g. af-south-1 runs slightly above average) and data transfer. The platform is designed to scale from a single-instance pilot to a multi-AZ production tier as learner volume grows.
 
 ## Operations at a glance
 
