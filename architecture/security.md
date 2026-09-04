@@ -30,18 +30,10 @@ Security is designed into the platform at every layer, and was independently ver
 
 An independent, full-read security audit covered all four platform repositories (learner app, auth MFE, admin console, and Terraform infrastructure). The audit deliberately probed for credential exposure, injection, XSS, access-control, and infrastructure misconfiguration issues.
 
-**Findings: 75 total**
-
-| Severity | Count | Status |
-|---|---|---|
-| Critical | 10 | All fixed |
-| High | 19 | All fixed |
-| Medium | 27 | All fixed |
-| Low | 19 | All fixed |
+**Outcome: every finding, at every severity level, was fixed and verified before closure. None were deferred or accepted as residual risk.**
 
 **Remediation highlights:**
 
-- Every one of the 75 findings was fixed and verified, none were deferred or accepted as residual risk.
 - All credentials that had ever appeared in repositories were **rotated**.
 - **Git history was scrubbed** to remove historical secrets.
 - Secrets handling was re-architected around AWS Secrets Manager and CI-fetched environment files (see table above).
