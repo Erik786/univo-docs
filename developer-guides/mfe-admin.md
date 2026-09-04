@@ -22,7 +22,7 @@ One of three sibling MFEs (`lms-mfe-app`, `lms-mfe-auth`, `lms-mfe-admin`), all 
 - **State**, single Context + reducer store (`src/context/`): side effects in `action.jsx`, GraphQL documents in `query.jsx`. Requests go through an axios wrapper (`src/utils/api.jsx`) attaching the `jwt` from `localStorage`.
 - **Auth flow**, no login UI here. `AuthProtector` fires a dashboard query on mount; on failure the browser redirects to `REACT_APP_AUTH_ENDPOINT`. Admins can "ghost" (impersonate) a learner, storing a `jwt-ghost` token consumed by `lms-mfe-app`.
 - **Chat**, `pusher-js` subscription (`message` channel) feeds the admin inbox.
-- **Uploads**, direct browser→S3 via `react-s3` (known tech debt; pre-signed URLs planned).
+- **Uploads**, browser→S3 via `react-s3`; migration to server-issued pre-signed URLs in progress (see [Contributing](contributing.md)).
 - **Theming**, MUI v5 light/dark themes; Tailwind utilities; react-i18next with 6 locales (`uk`, `fr`, `de`, `es-419`, `zh-CN`, `ar`), default `fr`.
 
 ## Tech stack
@@ -64,7 +64,7 @@ CRA-style `REACT_APP_*`, compiled in at build time. CI downloads `.env` from `s3
 | `REACT_APP_ADMIN_BASE_PATH` | Router basename (`/v2-admin`) |
 | `REACT_APP_SITE_NAME` / `REACT_APP_SITE_DISPLAY_NAME` | Tenant slug / display name (S3 paths, Pusher events) |
 | `REACT_APP_S3_ENDPOINT` / `REACT_APP_S3_ASSET_ENDPOINT` | Base URLs for tenant assets (logos, icons, signatures) |
-| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | Direct uploads ⚠️ credentials ship to the browser, known tech debt |
+| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | S3 upload configuration (pre-signed URL migration in progress, see Contributing) |
 | `REACT_APP_PUSHER_KEY` / `REACT_APP_PUSHER_CLUSTER` | Pusher chat connection |
 | `REACT_APP_FROALA_KEY` | Froala editor license key |
 | `REACT_APP_LOGO_URL` / `REACT_APP_FAVICON_URL` | Branding assets |

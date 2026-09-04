@@ -42,7 +42,7 @@ npm test         # must pass; add tests for logic changes in utils/context/redux
 - **Never commit** `.env` files, `*.pem` keys, AWS credentials, JWTs, or filled `terraform.tfvars`. Environment config is distributed via the S3 config bucket, not git.
 - **Sanitize HTML**: never inject API/user content with `dangerouslySetInnerHTML` without sanitizing first. Follow the escaping pattern in `src/pages/board/problems/RenderResponsePrompt.jsx` (lms-mfe-app).
 - Changes to credential handling, token storage, redirect logic, or the password-reset flow require explicit review.
-- Direct-to-S3 upload credentials (`REACT_APP_S3_*`) are known tech debt, do not expand their use; pre-signed URLs are the target design.
+- Browser uploads are being migrated to server-issued pre-signed URLs; do not add new code paths that use `REACT_APP_S3_*` directly.
 
 ## Design standards
 

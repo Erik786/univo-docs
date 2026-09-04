@@ -68,7 +68,7 @@ Compile-time `REACT_APP_*` values from `.env` (CI downloads it from the config b
 | `REACT_APP_GQL_ENDPOINT` | Platform GraphQL API (login, email-exists, reset) |
 | `REACT_APP_S3_ASSET_ENDPOINT` | Bucket hosting carousel/illustration assets |
 | `REACT_APP_S3_ENDPOINT` | Bucket hosting per-customer `theme.css` |
-| `REACT_APP_TEST_JWT_TOKEN` | Static bearer token sent with GraphQL auth calls (⚠️ rotate; move to CI-fetched config) |
+| `REACT_APP_TEST_JWT_TOKEN` | Bearer token for GraphQL auth calls, injected from the CI-fetched per-customer config (never committed) |
 
 ## Scripts
 

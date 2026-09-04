@@ -68,7 +68,7 @@ All variables are CRA-style `REACT_APP_*` inlined at build time. CI downloads th
 | `REACT_APP_ADMIN_ENDPOINT` / `REACT_APP_STUDIO_ENDPOINT` | Links to admin / studio |
 | `REACT_APP_SITE_NAME` / `REACT_APP_SITE_DISPLAY_NAME` | Customer site ID (Pusher events, S3 paths, certificates) |
 | `REACT_APP_PUSHER_KEY` / `REACT_APP_PUSHER_CLUSTER` | Pusher chat connection |
-| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | Direct-to-S3 uploads (⚠️ known tech debt, pre-signed URLs planned) |
+| `REACT_APP_S3_BUCKET_NAME` / `REACT_APP_S3_REGION` / `REACT_APP_S3_ACCESS_KEY` / `REACT_APP_S3_SECRET_KEY` | S3 upload configuration (pre-signed URL migration in progress, see Contributing) |
 | `REACT_APP_S3_ASSET_ENDPOINT` | CDN/S3 base for static assets |
 | `REACT_APP_JITSI_DOMAIN` | Jitsi base URL for live sessions |
 | `REACT_APP_FROALA_KEY` | Froala WYSIWYG license key |
