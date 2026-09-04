@@ -41,7 +41,12 @@
 * [🔭 Future Development](roadmap/future-development.md)
 * [📝 Changelog](roadmap/changelog.md)
 
-## 🌍 Translations
+## 🇫🇷 Français
+* [📚 Bienvenue sur LXS Univo](fr/README.md)
+* [🤝 Pour les clients : ce que vous obtenez](fr/getting-started/for-clients.md)
+* [🎓 Fonctionnalités](fr/product/features.md)
+* [🗺️ Feuille de route](fr/roadmap/README.md)
+* [🚀 Guide de déploiement](fr/deployment/deployment-guide.md)
 * [🌍 Translation plan (EN/FR)](translations/STRUCTURE.md)
 
 ## 📋 API Reference
