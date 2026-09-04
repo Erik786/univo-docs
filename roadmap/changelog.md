@@ -6,7 +6,7 @@ All notable changes to the platform are documented here. The format follows [Kee
 
 ### Security
 
-- **Full security audit completed.** 75 findings identified and fixed across all 4 platform repositories.
+- **Full security audit completed.** Independent full-read audit of all 4 platform repositories; every finding fixed and verified, none deferred.
 - **Credential rotation.** Every secret and API key was rotated as part of the audit remediation.
 - **History scrub.** Git history was scrubbed of all previously committed credentials.
 - **Secrets moved to Secrets Manager.** No secrets remain in source control; all are injected at deploy time.

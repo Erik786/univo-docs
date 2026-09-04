@@ -102,4 +102,3 @@ Every roadmap item is scored on:
 
 Roadmap items graduate from 🔭 exploration to 🔨 in progress only after a technical spike validates feasibility. No launch dates are committed beyond quarter granularity.
 
-*Last updated: 2026-08-04*
