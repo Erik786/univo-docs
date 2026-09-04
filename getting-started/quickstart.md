@@ -83,6 +83,15 @@ All variables are CRA-style `REACT_APP_*`, inlined at build time. The essentials
 
 💡 Prefer sourcing env vars from a file rather than a committed `.env`? The repos also support `npm run build:dev` (sources `./.env.development`) and `npm run build:prod` (sources `./.env.production`), see each repo's README.
 
+## ✅ Verify it works
+
+1. Open http://localhost:3000/auth, the login page renders with the customer logo from `REACT_APP_LOGO_URL`.
+2. Log in with a `USER` account, you are redirected to http://localhost:3000/app and the dashboard lists your courses (empty list is fine, a redirect loop is not).
+3. Open the browser devtools **Network** tab: every data call is a `POST` to `REACT_APP_GQL_ENDPOINT` with an `Authorization: Bearer …` header.
+4. Log in with an `ADMIN` or `STAFF` account, you land on http://localhost:3000/v2-admin.
+
+If step 2 loops back to `/auth`, the JWT in `localStorage` is missing or rejected: check `REACT_APP_GQL_ENDPOINT` and `REACT_APP_AUTH_ENDPOINT` first.
+
 ## ✅ Tests and lint
 
 {% code title="terminal" %}
