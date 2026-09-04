@@ -54,4 +54,4 @@ Detailed findings documents are internal engineering material; this page is the 
 - Security-sensitive code paths (credential handling, token storage, redirect logic, password reset, HTML rendering of user/API content) require mandatory review.
 - User- and API-supplied HTML is sanitized before rendering; unsafe injection patterns are banned by contribution guidelines.
 - CloudWatch alarms and centralized logs provide detection; SES notifications alert the operations team.
-- Re-audit is scheduled at each major architecture tier change (see [ADR-0004](decisions/ADR-0004-scale-200M.md)).
+- Re-audit is scheduled at each major architecture tier change, as the platform scales from a single-instance pilot to a multi-AZ production tier.

@@ -6,11 +6,11 @@ LXS Univo integrates best-in-class services instead of reinventing them. The tab
 |---|---|---|---|
 | **Pusher** | Realtime chat (coach ↔ learner) | `REACT_APP_PUSHER_KEY`, `REACT_APP_PUSHER_CLUSTER` | Public `message` channel; message history persisted via the GraphQL API |
 | **Jitsi** | Live video sessions | `REACT_APP_JITSI_DOMAIN` | Self-hostable or Jitsi-as-a-Service; sessions open in-app |
-| **Vimeo Pro** | Video hosting & streaming |, (embed via `vimeo` xBlock) | Player rendered with `@u-wave/react-vimeo`; no raw video stored in course assets |
+| **Vimeo Pro** | Video hosting & streaming | (embed via `vimeo` xBlock) | Player rendered with `@u-wave/react-vimeo`; no raw video stored in course assets |
 | **Froala** | WYSIWYG rich-text editor | `REACT_APP_FROALA_KEY` | Used by the `html` xBlock editor in Studio surfaces |
-| **Google Workspace** | Document embedding |, (via `google-document` xBlock) | Embeds Docs, Sheets and Slides directly in courseware |
-| **AWS S3** | Assets & file uploads |, (server-side) | Direct-to-S3 browser uploads are being replaced by pre-signed URLs (post-audit hardening, Q3 2026) |
-| **Stripe** | Payments |, | Dependency present in the codebase but currently unused, planned, see roadmap |
+| **Google Workspace** | Document embedding | (via `google-document` xBlock) | Embeds Docs, Sheets and Slides directly in courseware |
+| **AWS S3** | Assets & file uploads | (server-side) | Direct-to-S3 browser uploads are being replaced by pre-signed URLs (post-audit hardening, Q3 2026) |
+| **Stripe** | Payments | | Dependency present in the codebase but currently unused, planned, see roadmap |
 
 ## Configuration principles
 

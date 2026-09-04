@@ -105,5 +105,5 @@ aws cloudwatch describe-alarms --state-value ALARM
 ## What's next?
 
 - 📋 [Client Prerequisites](client-prerequisites.md), the gate before Day 1
-- ⚙️ [Operations Runbooks](../operations/runbooks.md), what client ops uses after handover
+- ⚙️ [Operations Runbooks](runbooks.md), what client ops uses after handover
 - 🏗️ [System Architecture](../architecture/system-architecture.md), the platform you're deploying

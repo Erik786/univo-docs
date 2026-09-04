@@ -30,6 +30,9 @@
 * [🎓 Features](product/features.md)
 * [💬 Social Learning](product/social-learning.md)
 * [📴 Offline-First Learning](product/offline-first.md)
+* Engineering specs
+  * [Offline Mode spec](product/specs/offline-mode-spec.md)
+  * [Social Learning 2.0 spec](product/specs/social-learning-spec.md)
 * [✍️ Studio, Content Creation](product/studio.md)
 * [🛠️ Authoring Tools Ecosystem](product/authoring-tools.md)
 
