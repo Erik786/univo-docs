@@ -2,10 +2,11 @@
 
 **Apprenez où que vous soyez, quand vous le souhaitez : le bon contenu, sur une plateforme qui vous appartient.** Le LMS éprouvé en production, en ligne en quelques heures.
 
-[![Get started](https://img.shields.io/badge/%F0%9F%9A%80_Get%20started-FE7B49?style=for-the-badge)](../getting-started/quickstart.md)
+[![Commencer](https://img.shields.io/badge/%F0%9F%9A%80_Commencer-FE7B49?style=for-the-badge)](getting-started/for-clients.md)
+[![Développeurs](https://img.shields.io/badge/%F0%9F%92%BB_D%C3%A9veloppeurs-1F2937?style=for-the-badge)](../getting-started/quickstart.md)
 [![View on GitHub](https://img.shields.io/badge/View_on_GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Erik786/univo-docs)
 
-*Documentation disponible en français, English version in progress.*
+*Version française des pages commerciales. [English version →](../README.md), la documentation technique reste en anglais.*
 
 ---
 
