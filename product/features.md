@@ -1,6 +1,6 @@
 # ✨ Features
 
-**Everything you expect from a modern LMS: built on the open-source engine powering 45M+ learners worldwide.**
+**Everything you expect from a modern LMS: built on Open edX, the open-source engine powering 45M+ learners worldwide.**
 
 No lock-in, no proprietary editor, no feature paywall: every capability below ships natively in LXS Univo, ready on day one.
 
