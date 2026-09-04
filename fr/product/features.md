@@ -1,6 +1,6 @@
 # ✨ Fonctionnalités
 
-**Tout ce que vous attendez d'un LMS moderne : construit sur le moteur open-source qui propulse plus de 45 millions d'apprenants dans le monde.**
+**Tout ce que vous attendez d'un LMS moderne : construit sur Open edX, le moteur open-source qui propulse plus de 45 millions d'apprenants dans le monde.**
 
 Pas de lock-in, pas d'éditeur propriétaire, pas de paywall sur les fonctionnalités : chaque capacité ci-dessous est livrée nativement dans LXS Univo, prête dès le premier jour.
 
