@@ -4,9 +4,10 @@ English is the primary documentation language. GitBook supports space variants, 
 
 ## Current state
 
-- All content is in English.
+- Sales-facing pages are available in French under `fr/` (homepage, For Clients, Features, Roadmap, Deployment Guide) and listed in the **🇫🇷 Français** group of the table of contents.
+- All technical pages are in English.
 - No hard-coded locale assumptions were found in the docs: locale references describe the platform's own i18n support (react-i18next, 6 locales in the admin MFE), not the documentation language.
-- The homepage (README.md) carries the line: *Documentation available in English, version française en cours.*
+- The homepage (README.md) links to the French homepage (`fr/README.md`) and vice versa.
 
 ## Pages to translate FIRST (sales-facing)
 
