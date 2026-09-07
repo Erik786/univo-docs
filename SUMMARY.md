@@ -22,7 +22,7 @@
 ## ☁️ Deployment & Operations
 * [📋 Client Prerequisites](deployment/client-prerequisites.md)
 * [🚀 Deployment Guide](deployment/deployment-guide.md)
-* [🔧 Open edX / Tutor Operations](deployment/tutor-operations.md)
+* [🔧 Course Engine Operations](deployment/tutor-operations.md)
 * [📖 Runbooks](deployment/runbooks.md)
 * [📊 Monitoring & Reliability](deployment/monitoring.md)
 
