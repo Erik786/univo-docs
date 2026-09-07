@@ -1,6 +1,6 @@
 # 🔌 E-Learning Standards, Support Matrix
 
-LXS Univo is built on Open edX, so it speaks the standards the e-learning industry actually uses. This page shows exactly which ones, where they work, and how to use them, with an honest status for each.
+LXS Univo is built on a mature open-source course engine, so it speaks the standards the e-learning industry actually uses. This page shows exactly which ones, where they work, and how to use them, with an honest status for each.
 
 {% hint style="success" %}
 **TL;DR:** SCORM packages and LTI tools run in courses today. IMS Common Cartridge and QTI content imports through Studio. xAPI and LTI Provider mode are on the [roadmap](../roadmap/README.md), we never claim support we don't have.
@@ -11,8 +11,8 @@ LXS Univo is built on Open edX, so it speaks the standards the e-learning indust
 | Standard | What it is (one line) | LXS status | How you use it |
 |---|---|---|---|
 | **SCORM 1.2 / 2004** | The classic ZIP package format for self-contained courses from authoring tools | ✅ **Supported** | Import the package into a course via Studio; learners launch it in the app's SCORM renderer |
-| **IMS Common Cartridge** | A package format for moving whole courses between LMS platforms | ✅ **Supported** | Import/export courses through Open edX Studio's course import/export |
-| **QTI** | A standard format for quizzes and question banks | ✅ **Supported** | Import quizzes into Studio via Open edX quiz import; questions become native problem xBlocks |
+| **IMS Common Cartridge** | A package format for moving whole courses between LMS platforms | ✅ **Supported** | Import/export courses through Studio's course import/export |
+| **QTI** | A standard format for quizzes and question banks | ✅ **Supported** | Import quizzes into Studio via the quiz import; questions become native problem xBlocks |
 | **LTI 1.3** | A protocol for embedding external learning tools (labs, simulators, graders) inside a course | 🟡 **Partial** | The LTI xBlock embeds external tools into courses today; LTI *Provider* mode (other platforms embedding LXS content) is on the roadmap |
 | **xAPI (Tin Can)** | A learning-record protocol that captures rich learner activity into a Learning Record Store | 🗺️ **Roadmap** | Planned as the backbone of advanced analytics, see [roadmap](../roadmap/README.md) |
 | **H5P** | An open format for interactive HTML5 content (quizzes, timelines, interactive video) | 🔍 **Under evaluation** | Not yet integrated; evaluation tracked on the roadmap |
@@ -38,11 +38,11 @@ SCORM is how most organizations already own content: a `.zip` exported from Arti
 
 ## 🧰 IMS Common Cartridge, move whole courses
 
-Common Cartridge (`.imscc`) is the standard for porting an entire course structure between platforms. Open edX Studio's **course import/export** handles it: export from your previous LMS, import in Studio, and the course outline lands as native units.
+Common Cartridge (`.imscc`) is the standard for porting an entire course structure between platforms. Studio's **course import/export** handles it: export from your previous LMS, import in Studio, and the course outline lands as native units.
 
 ## ❓ QTI, move question banks
 
-QTI packages carry quizzes and item banks. Studio's quiz import converts them into native Open edX problem xBlocks, so imported questions behave like any other LXS problem: grading, analytics and coach follow-up included.
+QTI packages carry quizzes and item banks. Studio's quiz import converts them into native problem xBlocks, so imported questions behave like any other LXS problem: grading, analytics and coach follow-up included.
 
 ## 🔗 LTI 1.3, embed external tools (partial)
 
