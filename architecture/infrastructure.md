@@ -15,7 +15,7 @@ The entire AWS stack is defined as code in the `lms-terraform` repository. Every
         ▼
 ┌────────────────────────────────────────────────────────────────┐
 │  PLATFORM  (once per deployed customer platform)               │
-│  EC2 (Tutor/Open edX, single instance)                         │
+│  EC2 (course engine / Tutor, single instance)                  │
 │  Lambda GraphQL services + API Gateway · cron Lambdas          │
 │  CloudFront distribution for static MFEs (admin/app/auth)      │
 │  Optional dedicated RDS MySQL / DocumentDB · Secrets Manager   │
@@ -32,8 +32,8 @@ The **bootstrap** layer creates account-wide shared resources once; the **platfo
 | Network | VPC, public/private subnets, NAT gateway | Per-account, from bootstrap |
 | Edge | CloudFront + CloudFront Function | Serves the three MFEs; TLS 1.2 minimum; CSRF endpoint caching disabled |
 | Web protection | AWS WAF (CloudFront scope) | Shared across platforms |
-| Load balancing | ALB | Fronts the Open edX EC2 instance |
-| Course engine | EC2 (Tutor / Open edX) | Single instance per platform at pilot scale |
+| Load balancing | ALB | Fronts the course-engine EC2 instance |
+| Course engine | EC2 (Tutor) | Single instance per platform at pilot scale |
 | Platform data | RDS MySQL | Shared (bootstrap) or dedicated (platform) |
 | Course content | DocumentDB | MongoDB-compatible modulestore |
 | API | Lambda + API Gateway | GraphQL services, versioned zip artifacts |
@@ -56,7 +56,7 @@ Indicative cost for a single pilot platform (100–1,000 active learners, single
 
 | Item | Sizing assumption | Est. USD/month |
 |---|---|---|
-| EC2 (Open edX / Tutor) | 1 × t3.medium, 24/7 | ~60 |
+| EC2 (course engine / Tutor) | 1 × t3.medium, 24/7 | ~60 |
 | RDS MySQL | db.t3.medium, single-AZ | ~50 |
 | DocumentDB | db.t3.medium, 1 instance | ~55 |
 | ALB | 1 ALB + modest LCU usage | ~20 |
