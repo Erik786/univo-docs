@@ -1,6 +1,6 @@
-# Tutor / Open edX Operations
+# Course Engine Operations
 
-Day-to-day operations for the Open edX (Tutor, Ulmo release) platform running on the customer EC2 instance. Access the instance via the bastion host:
+Day-to-day operations for the course engine (managed with Tutor, Ulmo release) running on the customer EC2 instance. Access the instance via the bastion host:
 
 ```bash
 ssh <bastion-host>
@@ -94,7 +94,7 @@ tutor local upgrade --from=<previous-release>   # runs migrations (e.g. from Tea
 ### Rollback
 
 - MFEs: redeploy the previous build, each CodeBuild run syncs from a known git ref; re-run the pipeline pinned to the previous release tag.
-- Open edX: restore the pre-upgrade RDS snapshot and DocumentDB snapshot, revert Tutor to the previous version (`pip install tutor==<old-version>`, `tutor config save`, restart). Course exports are the last-resort content restore.
+- Course engine: restore the pre-upgrade RDS snapshot and DocumentDB snapshot, revert Tutor to the previous version (`pip install tutor==<old-version>`, `tutor config save`, restart). Course exports are the last-resort content restore.
 - Infrastructure: `terraform plan`/`apply` from the previous state, never destroy to roll back.
 
 Prefer **restore service first, investigate second** (see [Runbooks](runbooks.md)).
