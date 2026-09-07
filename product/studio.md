@@ -1,6 +1,6 @@
 # Content Creation with Studio
 
-Course content is authored in **Open edX Studio** and rendered in the Learner app through xBlocks. Authors get the full power of the Open edX course engine with the components below.
+Course content is authored in **Studio** and rendered in the Learner app through xBlocks. Authors get the full power of the LXS Univo course engine with the components below.
 
 ## 🧩 xBlock types
 
